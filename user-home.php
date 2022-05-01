@@ -91,7 +91,7 @@ session_start();
         </div>
         <div class="col-md-6">
           <ul style="list-style-type:none">
-            <li><a href="blood-request-status.php">&nbsp;BLOOD REQUEST STATUS&nbsp;</a>
+            <li><a href="blood-request-status.php">&nbsp;MY DONATIONS&nbsp;</a>
             </li>
           </ul>
         </div>
@@ -106,7 +106,7 @@ session_start();
         </div>
         <div class="col-md-6">
           <ul style="list-style-type:none">
-            <li><a href="contact-staff.php">&nbsp;CONTACT MEDICAL STAFF&nbsp;</a>
+            <li><a href="contact-staff.php">&nbsp;MY REQUESTS&nbsp;</a>
             </li>
           </ul>
         </div>

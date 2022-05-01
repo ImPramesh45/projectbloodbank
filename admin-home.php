@@ -123,15 +123,21 @@ session_start();
             </li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul style="list-style-type:none;text-align:center">
             <li><a href="all-time-donations.php">&nbsp;ALL TIME DONATIONS&nbsp;</a>
             </li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul style="list-style-type:none;text-align:center">
             <li><a href="all-time-requests.php">&nbsp;ALL TIME REQUESTS&nbsp;</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul style="list-style-type:none;text-align:center">
+            <li><a href="manage-stock.php">&nbsp;MANAGE STOCK&nbsp;</a>
             </li>
           </ul>
         </div>

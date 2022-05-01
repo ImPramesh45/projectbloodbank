@@ -8,7 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Blood Bank</title>
 
     <link rel="stylesheet" href="css/admstyle.css">
 
@@ -85,79 +85,43 @@ session_start();
     }
     ?>
 
-
-    <h1><center>Users Lists</center></h1>
+  
+    <h1><center>Manage Stock</center></h1>
     <hr>
     <div style="overflow-x:auto;">
-    <table class="table table-striped table-dark w-auto" style="width:80%; margin:0% auto">
+    <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
         <thead>
             <tr>
                 <th scope="col"><center>ID</center></th>
                 <th scope="col"><center>First Name</center></th>
                 <th scope="col"><center>Last Name</center></th>
-                <th scope="col"><center>Date of Birth</center></th>
-                <th scope="col"><center>Gender</center></th>
-                <th scope="col"><center>Age</center></th>
-                <th scope="col"><center>Address</center></th>
-                <th scope="col"><center>Email</center></th>
-                <th scope="col"><center>Phone</center></th>
-                <th scope="col"><center>Username</center></th>
-                <th scope="col"><center>Password</center></th>
                 <th scope="col"><center>Blood Group</center></th>
+                <th scope="col"><center>Manage</center></th>
             </tr>
         </thead>
             <?php
-            $q=$db->query("SELECT * FROM user_registration");
+            $q=$db->query("SELECT * FROM stock_blood_list");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 ?>
                 <tbody>
                     <tr class="table-info">
-                        <th scope="row"><center><?= $r1->id; ?></center></th>
+                        <td><center><?= $r1->id; ?></center></td>
                         <td><center><?= $r1->fname; ?></center></td>
                         <td><center><?= $r1->lname; ?></center></td>
-                        <td><center><?= $r1->dob; ?></center></td>
-                        <td><center><?= $r1->gender; ?></center></td>
-                        <td><center><?= $r1->age; ?></center></td>
-                        <td><center><?= $r1->address; ?></center></td>
-                        <td><center><?= $r1->email; ?></center></td>
-                        <td><center><?= $r1->phone; ?></center></td>
-                        <td><center><?= $r1->username; ?></center></td>
-                        <td><center><?= $r1->password; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
+                        <td><center><form action="remove-stock.php" method="POST">
+                          <button type="submit" name="rmvstock" value="<?=$r1->id;?>" class="btn btn-danger">Remove From Stock</button>
+                        </form></center>
+                        </td>
                     </tr>
                 </tbody>
-                        <?php
+                <?php
             }
             ?>
-
-            <?php
-            $q=$db->query("SELECT * FROM donor_registration");
-            while($r1=$q->fetch(PDO::FETCH_OBJ))
-            {
-                ?>
-                <tbody>
-                    <tr class="table-info">
-                        <th scope="row"><center><?= $r1->id; ?></center></th>
-                        <td><center><?= $r1->fname; ?></center></td>
-                        <td><center><?= $r1->lname; ?></center></td>
-                        <td><center><?= $r1->dob; ?></center></td>
-                        <td><center><?= $r1->gender; ?></center></td>
-                        <td><center><?= $r1->age; ?></center></td>
-                        <td><center><?= $r1->address; ?></center></td>
-                        <td><center><?= $r1->email; ?></center></td>
-                        <td><center><?= $r1->phone; ?></center></td>
-                        <td><center><?= $r1->username; ?></center></td>
-                        <td><center><?= $r1->password; ?></center></td>
-                        <td><center><?= $r1->bgroup; ?></center></td>
-                    </tr>
-                </tbody>
-                        <?php
-            }
-            ?>
-
-    </table>
+      </table>
     </div>
+
     <section id="services" style="height:10px">
         <div class="container text-center">
             <h1 class="title">OUR SERVICES</h1>
@@ -218,7 +182,7 @@ session_start();
             </li>
           </ul>
         </div>
-                <div class="col-md-4">
+        <div class="col-md-4">
           <ul style="list-style-type:none;text-align:center">
             <li><a href="manage-stock.php">&nbsp;MANAGE STOCK&nbsp;</a>
             </li>
@@ -227,7 +191,6 @@ session_start();
       </div>
     </div>
     </section>
-    <hr>
             <footer class="text-center text-lg-start" style="background-color: #db6930;">
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

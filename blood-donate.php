@@ -239,42 +239,7 @@ session_start();
                       $email=$_POST['email'];
                       $phone=$_POST['phone'];
                       $bgroup=$_POST['bgroup'];
-                      $q=$db->prepare("INSERT INTO blood_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup)");
-                      $q->bindValue('fname',$fname);
-                      $q->bindValue('lname',$lname);
-                      $q->bindValue('dob',$dob);
-                      $q->bindValue('gender',$gender);
-                      $q->bindValue('age',$age);
-                      $q->bindValue('address',$address);
-                      $q->bindValue('email',$email);
-                      $q->bindValue('phone',$phone);
-                      $q->bindValue('bgroup',$bgroup);
-                      if($q->execute())
-                      {
-                        echo "<script>alert('Blood Donated Successfully')</script>";
-                        echo("<script>window.location = 'user-home.php';</script>");
-                      }
-                      else
-                      { 
-                        echo "<script>alert('Blood Donation Failed')</script>";
-                      }
- 
-                  }
-                  ?>
-
-                  <?php
-                  if (isset($_POST['subb']))
-                  {
-                      $fname=$_POST['fname'];
-                      $lname=$_POST['lname'];
-                      $dob=$_POST['dob'];
-                      $gender=$_POST['gender'];
-                      $age=$_POST['age'];
-                      $address=$_POST['address'];
-                      $email=$_POST['email'];
-                      $phone=$_POST['phone'];
-                      $bgroup=$_POST['bgroup'];
-                      $q=$db->prepare("INSERT INTO all_time_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup)");
+                      $q=$db->prepare("INSERT INTO blood_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup); INSERT INTO all_time_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup)");
                       $q->bindValue('fname',$fname);
                       $q->bindValue('lname',$lname);
                       $q->bindValue('dob',$dob);

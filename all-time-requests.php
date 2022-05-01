@@ -87,12 +87,12 @@ session_start();
 
 
     <h1><center>All Time Requests</center></h1>
-    
+    <hr>
     <div style="overflow-x:auto;">
     <table class="table table-striped table-dark w-auto" style="width:80%; margin:0% auto">
         <thead>
             <tr>
-                <th scope="col"><center>#</center></th>
+                <th scope="col"><center>ID</center></th>
                 <th scope="col"><center>First Name</center></th>
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Date of Birth</center></th>
@@ -111,7 +111,7 @@ session_start();
                 ?>
                 <tbody>
                     <tr class="table-info">
-                        <th scope="row"><center>-></center></th>
+                        <th scope="row"><center><?= $r1->id; ?></center></th>
                         <td><center><?= $r1->fname; ?></center></td>
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->dob; ?></center></td>
@@ -176,15 +176,21 @@ session_start();
             </li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul style="list-style-type:none;text-align:center">
             <li><a href="all-time-donations.php">&nbsp;ALL TIME DONATIONS&nbsp;</a>
             </li>
           </ul>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
           <ul style="list-style-type:none;text-align:center">
             <li><a href="all-time-requests.php">&nbsp;ALL TIME REQUESTS&nbsp;</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <ul style="list-style-type:none;text-align:center">
+            <li><a href="manage-stock.php">&nbsp;MANAGE STOCK&nbsp;</a>
             </li>
           </ul>
         </div>

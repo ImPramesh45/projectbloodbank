@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#nav-bar {
+    position:sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    padding-bottom: 0 !important;
+}
+
+
+.container-fluid {
+    background-image: linear-gradient(to right, #1c867e,#3b4138);
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    margin-top: 4px;
+    color: rgb(56, 54, 71) !important;
+    font-weight: 700;
+    border-radius: 12px;
+    
+}
+
+.navbar-nav li a:hover{
+    background-color:rgb(145, 211, 216) ;
+    border-radius: 12px;
+}
+
+
+
+.fa-bars {
+    color: white;
+    font-size: 30px !important;
+}
+
+/*-----------BANNER SECTION----------------*/
+
+#banner {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    color: #fff;
+    padding-top: 1%;
+}
+
+
+.promo-title {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+.play-btn {
+    width: 55px;
+    margin: 20px;
+}
+
+#banner a {
+
+    color: white;
+    text-decoration: none;
+}
+.img-fluid {
+    margin-right: 0 !important;
+}
+
+/*-----------services section-------------*/
+
+#services {
+
+    padding: 80px 0;
+}
+
+.service-img {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.services {
+
+    padding: 20px;
+}
+
+.services h4 {
+    padding: 5px;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.title::before {
+    content: '';
+    background: #7b1798;
+    height: 5px;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transform:translateY(63px)
+}
+
+.title::after {
+    content: '';
+    background: #7b1798;
+    height: 10px;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+    display: block;
+    transform:translateY(8px)
+}
+
+#services .btn-primary{
+    box-shadow: none;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 20px;
+    background-color: #7b1798;
+}
+
+#services .btn-primary:hover{
+    background-color: #a236c0;
+}
+
+#nav-bar #loghover a:hover{
+    background-color: red;
+}
+#services .services a:hover{
+    background-color: #fff;
+}
+
+.containerr {
+    padding: 20px;
+    height: auto;
+}
+
+
+.containerr .listss ul{
+    list-style-type: none;
+    text-align: center;
+}
+
+.containerr ul li a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #1f5337;
+    border-radius: 5px;
+}
+
+.containerr ul li a:hover{
+    background-color:white ;
+    color: black;
+    transition: 0.8s;
+    border-radius: 10px;
+
+}
+
+.gradient-custom {
+    /* fallback for old browsers */
+    background: #f093fb;
+  
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-linear-gradient(to bottom right, rgba(240, 147, 251, 1), rgba(245, 87, 108, 1));
+  
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #009fff, #ec2f4b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  
+  .card-registration .select-input.form-control[readonly]:not([disabled]) {
+    font-size: 1rem;
+    line-height: 2.15;
+    padding-left: .75em;
+    padding-right: .75em;
+    
+  }
+  .card-registration .select-arrow {
+    top: 13px;
+  }
+
+  section .container .card-registration{
+    background: linear-gradient(to right, #648484, #712b84); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: none;
+  }
+
+  .dtHorizontalExampleWrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  #dtHorizontalExample th, td {
+    white-space: nowrap;
+  }
+  
+  table.dataTable thead .sorting:after,
+  table.dataTable thead .sorting:before,
+  table.dataTable thead .sorting_asc:after,
+  table.dataTable thead .sorting_asc:before,
+  table.dataTable thead .sorting_asc_disabled:after,
+  table.dataTable thead .sorting_asc_disabled:before,
+  table.dataTable thead .sorting_desc:after,
+  table.dataTable thead .sorting_desc:before,
+  table.dataTable thead .sorting_desc_disabled:after,
+  table.dataTable thead .sorting_desc_disabled:before {
+   bottom: .5em;
+  }

@@ -98,7 +98,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="fname" id="firstName" class="form-control form-control-lg" />
+                          <input type="text" name="fname" id="firstName" class="form-control form-control-lg" required/>
                           <label class="form-label" for="firstName">First Name</label>
                         </div>
       
@@ -106,7 +106,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="lname" id="lastName" required class="form-control form-control-lg" />
+                          <input type="text" name="lname" id="lastName" class="form-control form-control-lg" required/>
                           <label class="form-label" for="lastName">Last Name</label>
                         </div>
       
@@ -231,6 +231,7 @@ session_start();
 
                   if (isset($_POST['subb']))
                   {
+                      $username=$_SESSION['username'];
                       $fname=$_POST['fname'];
                       $lname=$_POST['lname'];
                       $dob=$_POST['dob'];
@@ -239,8 +240,9 @@ session_start();
                       $address=$_POST['address'];
                       $email=$_POST['email'];
                       $phone=$_POST['phone'];
+                      $bgroup=$_POST['requestdate'];
                       $bgroup=$_POST['bgroup'];
-                      $q=$db->prepare("INSERT INTO blood_requests(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup); INSERT INTO all_time_requests(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup)");
+                      $q=$db->prepare("INSERT INTO blood_requests(fname,lname,dob,gender,age,address,email,phone,username,requestdate,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:requestdate,:bgroup); INSERT INTO all_time_requests(fname,lname,dob,gender,age,address,email,phone,username,requestdate,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:requestdate,:bgroup)");
                       $q->bindValue('fname',$fname);
                       $q->bindValue('lname',$lname);
                       $q->bindValue('dob',$dob);
@@ -249,6 +251,8 @@ session_start();
                       $q->bindValue('address',$address);
                       $q->bindValue('email',$email);
                       $q->bindValue('phone',$phone);
+                      $q->bindValue('username',$username);
+                      $q->bindValue('requestdate',$requestdate);
                       $q->bindValue('bgroup',$bgroup);
                       if($q->execute())
                       {

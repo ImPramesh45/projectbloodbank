@@ -219,7 +219,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="password" id="passsword" class="form-control form-control-lg" />
+                          <input type="text" name="password" id="passsword" class="form-control form-control-lg" required/>
                           <label class="form-label" for="password">Password</label>
                         </div>
       

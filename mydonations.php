@@ -79,41 +79,46 @@ session_start();
         header("Location:log-in.php");
     }
     ?>
+
+    <h1><center>My Donations</center></h1>
     <hr>
-    <section class="wh-150 gradient-custom">
-    <div class="container containerr">
-      <div class="row">
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="blood-donate.php">&nbsp;BLOOD DONATE&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="mydonations.php">&nbsp;MY DONATIONS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="blood-request.php">&nbsp;BLOOD REQUEST&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="myrequests.php">&nbsp;MY REQUESTS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    <div style="overflow-x:auto;">
+      <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
+        <thead>
+            <tr>
+                <th scope="col"><center>ID</center></th>
+                <th scope="col"><center>First Name</center></th>
+                <th scope="col"><center>Last Name</center></th>
+                <th scope="col"><center>Blood Group</center></th>
+                <th scope="col"><center>Donation Date</center></th>
+                <th scope="col"><center>Confirm</center></th>
+            </tr>
+        </thead>
+            <?php
+            $q=$db->query("SELECT * FROM all_time_donations WHERE username='$username'");
+            while($r1=$q->fetch(PDO::FETCH_OBJ))
+            {
+                ?>
+                <tbody>
+                    <tr class="table-info">
+                        <td><center><?= $r1->id; ?></center></td>
+                        <td><center><?= $r1->fname; ?></center></td>
+                        <td><center><?= $r1->lname; ?></center></td>
+                        <td><center><?= $r1->bgroup; ?></center></td>
+                        <td><center><?= $r1->donationdate; ?></center></td>
+                        <td><center><form action="confirm-request.php" method="POST">
+                          <button type="submit" name="confirmed" value="<?=$r1->id;?>" class="btn btn-danger">Confirm</button>
+                        </form></center>
+                        </td>
+                    </tr>
+                </tbody>
+                        <?php
+            }
+            ?>
+
+      </table>
     </div>
-    </section>
-    
+    <hr>
     <footer class="text-center text-lg-start" style="background-color: #db6930;">
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">

@@ -97,6 +97,7 @@ session_start();
                 <th scope="col"><center>First Name</center></th>
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Blood Group</center></th>
+                <th scope="col"><center>Request Date</center></th>
                 <th scope="col"><center>Confirm</center></th>
                 <th scope="col"><center>Cancel</center></th>
             </tr>
@@ -112,6 +113,7 @@ session_start();
                         <td><center><?= $r1->fname; ?></center></td>
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
+                        <td><center><?= $r1->requestdate; ?></center></td>
                         <td><center><form action="confirm-request.php" method="POST">
                           <button type="submit" name="confirmed" value="<?=$r1->id;?>" class="btn btn-danger">Confirm</button>
                         </form></center>

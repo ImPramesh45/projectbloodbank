@@ -96,6 +96,7 @@ session_start();
                 <th scope="col"><center>First Name</center></th>
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Blood Group</center></th>
+                <th scope="col"><center>Donation Date</center></th>
                 <th scope="col"><center>Approve</center></th>
                 <th scope="col"><center>Fail</center></th>
             </tr>
@@ -111,6 +112,7 @@ session_start();
                         <td><center><?= $r1->fname; ?></center></td>
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
+                        <td><center><?= $r1->donationdate; ?></center></td>
                         <td><center><form action="approve-donations.php" method="POST">
                           <button type="submit" name="approve" value="<?=$r1->id;?>" class="btn btn-danger">Approve</button>
                         </form></center>

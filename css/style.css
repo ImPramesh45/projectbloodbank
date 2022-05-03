@@ -136,3 +136,15 @@ body {
 #nav-bar #loghover a:hover{
     background-color: red;
 }
+
+.form_error span {
+    width: 80%;
+    height: 35px;
+    margin: 3px 10%;
+    font-size: 1.1em;
+    color: #D83D5A;
+  }
+
+  .form_error input {
+    border: 1px solid #D83D5A;
+  }

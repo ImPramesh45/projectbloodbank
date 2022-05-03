@@ -83,7 +83,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="fname" id="firstName" class="form-control form-control-lg" />
+                          <input type="text" name="fname" id="firstName" class="form-control form-control-lg" required/>
                           <label class="form-label" for="firstName">First Name</label>
                         </div>
       
@@ -91,7 +91,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="lname" id="lastName" class="form-control form-control-lg" />
+                          <input type="text" name="lname" id="lastName" class="form-control form-control-lg" required/>
                           <label class="form-label" for="lastName">Last Name</label>
                         </div>
       
@@ -106,7 +106,7 @@ session_start();
                             type="text" name="dob"
                             class="form-control form-control-lg"
                             id="birthDate"
-                          />
+                            required/>
                           <label for="birthdayDate" class="form-label">Date of Birth</label>
                         </div>
       
@@ -156,7 +156,7 @@ session_start();
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="age" name="age" id="age" class="form-control form-control-lg" />
+                          <input type="age" name="age" id="age" class="form-control form-control-lg" required/>
                           <label class="form-label" for="age">Age</label>
                         </div>
       
@@ -164,7 +164,7 @@ session_start();
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="address" name="address" id="address" class="form-control form-control-lg" />
+                          <input type="address" name="address" id="address" class="form-control form-control-lg" required/>
                           <label class="form-label" for="address">Address</label>
                         </div>
       
@@ -174,8 +174,8 @@ session_start();
                     <div class="row">
                       <div class="col-md-6 mb-4 pb-2">
       
-                        <div class="form-outline">
-                          <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" />
+                        <div class="form-outline" >
+                          <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" required/>
                           <label class="form-label" for="emailAddress">Email</label>
                         </div>
       
@@ -183,7 +183,7 @@ session_start();
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="tel" name="phone" id="phoneNumber" class="form-control form-control-lg" />
+                          <input type="tel" name="phone" id="phoneNumber" class="form-control form-control-lg" required/>
                           <label class="form-label" for="phoneNumber">Phone Number</label>
                         </div>
       
@@ -194,7 +194,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="username" id="userrname" class="form-control form-control-lg" />
+                          <input type="text" name="username" id="userrname"class="form-control form-control-lg" required/>
                           <label class="form-label" for="Username">Username</label>
                         </div>
       
@@ -202,7 +202,7 @@ session_start();
                       <div class="col-md-6 mb-4">
       
                         <div class="form-outline">
-                          <input type="text" name="password" id="passsword" class="form-control form-control-lg" />
+                          <input type="text" name="password" id="passsword" class="form-control form-control-lg" required/>
                           <label class="form-label" for="password">Password</label>
                         </div>
       
@@ -247,7 +247,16 @@ session_start();
                       $username=$_POST['username'];
                       $password=$_POST['password'];
                       $bgroup=$_POST['bgroup'];
-                      $q=$db->prepare("INSERT INTO user_registration(fname,lname,dob,gender,age,address,email,phone,username,password,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:password,:bgroup)");
+                      $registered_date=$_POST['registered_date'];
+
+                      $vlduser = $db->prepare("SELECT * from user_registration WHERE username=?");
+                      $vlduser->execute(array($username));
+                      if ( $vlduser->rowCount() > 0 ) {
+                        echo "<script>alert('Username Already Taken. Please use another username.')</script>";
+                        echo("<script>window.location = 'signup.php';</script>");
+                      }
+                      else{
+                      $q=$db->prepare("INSERT INTO user_registration(fname,lname,dob,gender,age,address,email,phone,username,password,bgroup,registered_date) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:password,:bgroup,:registered_date)");
                       $q->bindValue('fname',$fname);
                       $q->bindValue('lname',$lname);
                       $q->bindValue('dob',$dob);
@@ -259,6 +268,7 @@ session_start();
                       $q->bindValue('username',$username);
                       $q->bindValue('password',$password);
                       $q->bindValue('bgroup',$bgroup);
+                      $q->bindValue('registered_date',$registered_date);
                       if($q->execute())
                       {
                         echo "<script>alert('User Registered Successfully')</script>";
@@ -267,7 +277,9 @@ session_start();
                       else
                       {
                         echo "<script>alert('User Registration Failed')</script>";
-                      }     
+                      }
+                      }   
+                       
                   }
                   ?>
                   

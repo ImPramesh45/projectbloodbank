@@ -230,6 +230,7 @@ session_start();
                   <?php
                   if (isset($_POST['subb']))
                   {
+                      $username=$_SESSION['username'];
                       $fname=$_POST['fname'];
                       $lname=$_POST['lname'];
                       $dob=$_POST['dob'];
@@ -238,8 +239,9 @@ session_start();
                       $address=$_POST['address'];
                       $email=$_POST['email'];
                       $phone=$_POST['phone'];
+                      $donationdate=$_POST['donationdate'];
                       $bgroup=$_POST['bgroup'];
-                      $q=$db->prepare("INSERT INTO blood_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup); INSERT INTO all_time_donations(fname,lname,dob,gender,age,address,email,phone,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:bgroup)");
+                      $q=$db->prepare("INSERT INTO blood_donations(fname,lname,dob,gender,age,address,email,phone,username,donationdate,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:donationdate,:bgroup); INSERT INTO all_time_donations(fname,lname,dob,gender,age,address,email,phone,username,donationdate,bgroup) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:donationdate,:bgroup)");
                       $q->bindValue('fname',$fname);
                       $q->bindValue('lname',$lname);
                       $q->bindValue('dob',$dob);
@@ -248,6 +250,8 @@ session_start();
                       $q->bindValue('address',$address);
                       $q->bindValue('email',$email);
                       $q->bindValue('phone',$phone);
+                      $q->bindValue('username',$username);
+                      $q->bindValue('donationdate',$donationdate);
                       $q->bindValue('bgroup',$bgroup);
                       if($q->execute())
                       {

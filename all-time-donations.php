@@ -101,6 +101,7 @@ session_start();
                 <th scope="col"><center>Address</center></th>
                 <th scope="col"><center>Email</center></th>
                 <th scope="col"><center>Phone</center></th>
+                <th scope="col"><center>Donation Date</center></th>
                 <th scope="col"><center>Blood Group</center></th>
             </tr>
         </thead>
@@ -120,6 +121,7 @@ session_start();
                         <td><center><?= $r1->address; ?></center></td>
                         <td><center><?= $r1->email; ?></center></td>
                         <td><center><?= $r1->phone; ?></center></td>
+                        <td><center><?= $r1->donationdate; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
                     </tr>
                 </tbody>

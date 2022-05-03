@@ -6,7 +6,7 @@ include('connection.php');
      $id = $_POST['confirmed'];
  
      try{
-         $query = "INSERT INTO confirmed_blood_requests (fname,lname,bgroup) SELECT fname,lname,bgroup FROM blood_requests WHERE id=:id; DELETE FROM blood_requests WHERE id=:id; DELETE FROM stock_blood_list WHERE id=:id";
+         $query = "INSERT INTO confirmed_blood_requests (fname,lname,bgroup) SELECT fname,lname,bgroup FROM blood_requests WHERE id=:id;  DELETE FROM blood_requests WHERE id=:id; DELETE FROM stock_blood_list WHERE id=:id";
          $statement = $db->prepare($query);
          $data = [':id' => $id];
          $query_execute =  $statement->execute($data);
@@ -25,5 +25,5 @@ include('connection.php');
          echo $e->getMessage();
          }
          }
- 
+
  ?>

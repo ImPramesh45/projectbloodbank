@@ -43,10 +43,20 @@ session_start();
                     <a class="nav-link" href="all-donations.php">Blood Donations</a>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact Us</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin Panel
                     </a>
-                  </li>      
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="user-list.php">USERS LIST</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
+                      <li><a class="dropdown-item" href="manage-stock.php">MANAGE STOCK</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
+                    </ul>
+                  </li>     
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
                 <a class="btn btn-outline-success" href="admin-logout.php">Logout</a>

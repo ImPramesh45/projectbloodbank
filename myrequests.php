@@ -39,10 +39,16 @@ session_start();
                     <a class="nav-link" href="#">Blood Request</a>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact Us</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      My Tasks
                     </a>
-                  </li>         
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="mydonations.php">MY DONATIONS</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="myrequests.php">MY REQUESTS</a></li>
+                    </ul>
+                  </li>        
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, User</h4>
                 <a class="btn btn-outline-success" href="user-logout.php">Logout</a>
@@ -80,7 +86,7 @@ session_start();
     }
     ?>
 
-    <h1><center>My Donations</center></h1>
+    <h1><center>My Requests</center></h1>
     <hr>
     <div style="overflow-x:auto;">
       <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
@@ -91,7 +97,6 @@ session_start();
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Blood Group</center></th>
                 <th scope="col"><center>Request Date</center></th>
-                <th scope="col"><center>Confirm</center></th>
             </tr>
         </thead>
             <?php
@@ -106,10 +111,6 @@ session_start();
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
                         <td><center><?= $r1->requestdate; ?></center></td>
-                        <td><center><form action="confirm-request.php" method="POST">
-                          <button type="submit" name="confirmed" value="<?=$r1->id;?>" class="btn btn-danger">Confirm</button>
-                        </form></center>
-                        </td>
                     </tr>
                 </tbody>
                         <?php

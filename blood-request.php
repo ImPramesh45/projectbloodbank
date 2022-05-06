@@ -40,10 +40,16 @@ session_start();
                     <a class="nav-link" href="blood-request.php">Blood Request</a>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact Us</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      My Tasks
                     </a>
-                  </li>         
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="mydonations.php">MY DONATIONS</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="myrequests.php">MY REQUESTS</a></li>
+                    </ul>
+                  </li>        
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, User</h4>
                 <a class="btn btn-outline-success" href="user-logout.php">Logout</a>
@@ -223,7 +229,7 @@ session_start();
       
                       </div>
                     <div class="mt-4 pt-2">
-                      <input class="btn btn-primary btn-lg" type="submit" name="subb" value="Submit"/>
+                      <input class="btn btn-primary btn-lg" type="submit" name="subb" value="Request"/>
                     </div>
       
                   </form>

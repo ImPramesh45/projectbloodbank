@@ -15,7 +15,12 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
+    <script src="resource/js/jquery-1.11.0.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+      $('dropdown-toggle').dropdown()
+      });</script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body>
@@ -27,7 +32,7 @@ session_start();
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-2">
                   <li class="nav-item">
                     <a class="nav-link" aria-current="page" href="admin-home.php">Home</a>
@@ -43,10 +48,20 @@ session_start();
                     <a class="nav-link" href="all-donations.php">Blood Donations</a>
                     </a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact Us</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Admin Panel
                     </a>
-                  </li>      
+                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                      <li><a class="dropdown-item" href="user-list.php">USERS LIST</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
+                      <li><a class="dropdown-item" href="manage-stock.php">MANAGE STOCK</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
+                    </ul>
+                  </li>   
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
                 <a class="btn btn-outline-success" href="admin-logout.php">Logout</a>

@@ -1,8 +1,8 @@
 <?php
-ob_start();
 include('connection.php');
 session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -35,15 +35,16 @@ session_start();
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Notices</a>
+                    <a class="nav-link" href="notices.php">Notices</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                    </a>
+                    <a class="nav-link" href="about-us.php">About Us</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
-                    </a>
+                  </li>
+                  <li class="nav-item">
+                  <a class="btn btn-outline-info" href="admin-login.php" style= "margin-right:5px;font-weight:650">Admin Login</a>
                   </li>       
                 </ul>
                 <a class="btn btn-outline-info" href="log-in.php" style= "margin-right:5px;font-weight:650">Log In</a>
@@ -59,7 +60,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                <a class ="promo-title"href="index.php">BLOOD BANK</a>
+                <a class ="promo-title"href="index.php">BLOODBANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">
@@ -71,56 +72,36 @@ session_start();
 
     <!-------------Body Section ------------------->
 
-    <div id="body">
-      <section class="vh-150 gradient-custom">
-        <div class="container py-5 h-100">
-          <div class="row justify-content-center align-items-center h-100">
-            <div class="col-14 col-lg-9 col-xl-7">
-              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-                <div class="card-body p-4 p-md-3" style="background: linear-gradient(to right, #0099f7, #f11712); color:white; text-align:center">
-                  <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><center><u>Login as Admin</u></center></h3>
-                    <form action="" method="post" style="margin: auto; width: 250px;">
-                      <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Username</label>
-                        <input type="text" name="un" class="form-control" id="exampleInputEmail1" style="width: 250px; height:40px; border-radius: 10px;" aria-describedby="emailHelp">
-                      </div>
-                      <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" name="ps" class="form-control" id="exampleInputPassword1" style="width: 250px; height:40px; border-radius: 10px;" >
-                      </div>
-                      <input type="submit" name="sub" value="Login" class="btn btn-primary"  style="width: 250px; height:40px; border-radius: 10px;">
-                    
-                    </form>
+  <div id="body">
+
+    <!-------------service section ----------------->
+
+    <section id="services">
+        <div class="container text-center">
+            <h1 class="title">ABOUT BLOOD BANK</h1>
+            <div class="row text-center">
+                <div class="col-md-4 services">
+                    <img src="images/counselor.png" alt="counselor" class="service-img">
+                    <h4>MISSION</h4>
+                    <p>Fostering high-quality, equitable care, transformative research, and innovative education to improve the lives of patients with blood and bone marrow disorders.</p>
                 </div>
-              </div>
+                <div class="col-md-4 services">
+                    <img src="images/career.png" alt="counselor" class="service-img">
+                    <h4>CAREERS AT BLOOD BANK</h4>
+                    <p>Explore all open positions at BLOOD BANK and find a career opportunity that matches your interests and aspirations.</p>
+                </div>
+                <div class="col-md-4 services">
+                    <img src="images/aid.png" alt="counselor" class="service-img">
+                    <h4>HISTORY OF Blood Bank</h4>
+                    <p>In April 1958, the first official meeting of the BLOOD BANK was held in Atlantic City, New Jersey, where more than 300 hematologists gathered to discuss clinical and research matters related to blood and blood diseases. Since that initial meeting, ASH has played an active and important role in the development of hematology as a discipline.For more than six decades, ASH has sponsored its annual meeting, the premier education and scientific event in the field of hematology, and has published the journal Blood, the most cited peer-reviewed publication in the field. 
+                    </p>
+                </div>
             </div>
-          </div>
+            <button type="button" class="btn btn-primary">All Services</button>
         </div>
-      </section>
-      
-    </div>
-    <?php
-    if(isset($_POST['sub']))
-    {
-      $un=$_POST['un'];
-      $ps=$_POST['ps'];
-      $q=$db->prepare("SELECT * FROM admin WHERE uname='$un' AND pass='$ps'");
-      $q->execute();
-      $res=$q->fetchAll(PDO::FETCH_OBJ);
-      if($res)
-      {
-        $_SESSION['un']=$un;
-        header('Location:admin-home.php');
-        ob_end_flush();
-      }
-      else
-      {
-        echo "<script>alert('Wrong User')</script>";
-      }
-    }
-    ?>
-    <hr>
-    <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
+    </section>
+      <hr>
+      <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
@@ -128,5 +109,5 @@ session_start();
       </div>
       <!-- Copyright -->
     </footer>
-</body>
+  </body>
 </html>

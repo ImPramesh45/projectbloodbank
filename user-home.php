@@ -36,7 +36,7 @@ session_start();
                     <a class="nav-link" href="blood-donate.php">Blood Donate</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Blood Request</a>
+                    <a class="nav-link" href="blood-request.php">Blood Request</a>
                     </a>
                   </li>
                   <li class="nav-item dropdown">
@@ -51,7 +51,7 @@ session_start();
                   </li>        
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, User</h4>
-                <a class="btn btn-outline-success" href="user-logout.php">Logout</a>
+                <a class="btn btn-outline-info" href="user-logout.php" style="font-weight:650">Logout</a>
                 
                 
                 
@@ -66,7 +66,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="userhome.php">BLOOD BANK</a>
+                    <a class ="promo-title"href="user-home.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">

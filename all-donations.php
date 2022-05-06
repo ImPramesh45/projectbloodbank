@@ -53,13 +53,16 @@ session_start();
                       <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
                       <li><a class="dropdown-item" href="manage-stock.php">MANAGE STOCK</a></li>
                       <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="approved-blood-donations.php">APPROVED DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="confirmed-blood-requests.php">CONFIRMED REQUESTS</a></li>
+                      <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
                       <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
                     </ul>
                   </li>     
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
-                <a class="btn btn-outline-success" href="admin-logout.php">Logout</a>
+                <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
                 
                 
                 

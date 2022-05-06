@@ -59,7 +59,7 @@ session_start();
                   </li>       
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
-                <a class="btn btn-outline-success" href="admin-logout.php">Logout</a>
+                <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
                 
                 
                 

@@ -6,7 +6,7 @@ include('connection.php');
      $id = $_POST['confirmed'];
  
      try{
-         $query = "INSERT INTO confirmed_blood_requests (fname,lname,requestdate,bgroup) SELECT fname,lname,requestdate,bgroup FROM blood_requests WHERE id=:id;  DELETE FROM blood_requests WHERE id=:id";
+         $query = "INSERT INTO confirmed_blood_requests (fname,lname,username,requestdate,bgroup) SELECT fname,lname,username,requestdate,bgroup FROM blood_requests WHERE id=:id;  DELETE FROM blood_requests WHERE id=:id";
          $statement = $db->prepare($query);
          $data = [':id' => $id];
          $query_execute =  $statement->execute($data);

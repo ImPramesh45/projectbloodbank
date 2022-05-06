@@ -59,7 +59,7 @@ session_start();
                       <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
                       <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
                     </ul>
-                  </li>      
+                  </li>     
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
                 <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
@@ -98,22 +98,23 @@ session_start();
     }
     ?>
 
+    
+    <h1><center>Confirmed Requests</center></h1>
   
-    <h1><center>Manage Stock</center></h1>
-    <hr>
     <div style="overflow-x:auto;">
-    <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
+      <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
         <thead>
             <tr>
                 <th scope="col"><center>ID</center></th>
                 <th scope="col"><center>First Name</center></th>
                 <th scope="col"><center>Last Name</center></th>
+                <th scope="col"><center>Username</center></th>
                 <th scope="col"><center>Blood Group</center></th>
-                <th scope="col"><center>Manage</center></th>
+                <th scope="col"><center>Donation Date</center></th>
             </tr>
         </thead>
             <?php
-            $q=$db->query("SELECT * FROM stock_blood_list");
+            $q=$db->query("SELECT * FROM confirmed_blood_requests");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 ?>
@@ -122,11 +123,9 @@ session_start();
                         <td><center><?= $r1->id; ?></center></td>
                         <td><center><?= $r1->fname; ?></center></td>
                         <td><center><?= $r1->lname; ?></center></td>
+                        <td><center><?= $r1->username; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
-                        <td><center><form action="remove-stock.php" method="POST">
-                          <button type="submit" name="rmvstock" value="<?=$r1->id;?>" class="btn btn-danger">Remove From Stock</button>
-                        </form></center>
-                        </td>
+                        <td><center><?= $r1->donationdate; ?></center></td>
                     </tr>
                 </tbody>
                 <?php

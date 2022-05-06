@@ -7,7 +7,7 @@ include('connection.php');
     $id = $_POST['approve'];
 
     try{
-        $query = "INSERT INTO stock_blood_list (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id; DELETE FROM blood_donations WHERE id=:id";
+        $query = "INSERT INTO stock_blood_list (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id;INSERT INTO approved_donations (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id; DELETE FROM blood_donations WHERE id=:id";
         $statement = $db->prepare($query);
         $data = [':id' => $id];
         $query_execute =  $statement->execute($data);

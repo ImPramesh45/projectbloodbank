@@ -40,18 +40,15 @@ session_start();
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
-                    </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
-                    </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="admin-login.php">Admin Login</a>
-                    </a>
+                  <a class="btn btn-outline-info" href="admin-login.php" style= "margin-right:5px;font-weight:650">Admin Login</a>
                   </li>      
                 </ul>
-                <a class="btn btn-outline-success" href="signup.php">Sign Up</a>
+                <a class="btn btn-warning" href="signup.php">Sign Up</a>
               </div>
             </div>
           </nav>
@@ -92,7 +89,7 @@ session_start();
                         <label for="exampleInputPassword1" class="form-label">Password</label>
                         <input type="password" name="password" class="form-control" id="exampleInputPassword1" style="width: 250px; height:40px; border-radius: 10px;" >
                       </div>
-                      <input type="submit" name="subm" value="Login" class="btn btn-primary"  style="width: 250px; height:40px; border-radius: 10px;">
+                      <input type="submit" name="subm" value="Login" class="btn btn-primary"  style="width: 250px; height:40px; border-radius: 10px;font-weight:650">
                     
                     </form>
                 </div>
@@ -124,11 +121,11 @@ session_start();
     }
     ?>
     <hr>
-    <footer class="text-center text-lg-start" style="background-color: #db6930;">
+    <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/">Blood Bank Official</a>
+      <div class="text-center p-3" style="color: white;font-weight:600">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

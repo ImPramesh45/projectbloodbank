@@ -39,19 +39,16 @@ session_start();
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">About Us</a>
-                    </a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
-                    </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="admin-login.php">Admin Login</a>
-                    </a>
+                  <a class="btn btn-outline-info" href="admin-login.php" style= "margin-right:5px;font-weight:650">Admin Login</a>
                   </li>       
                 </ul>
-                <a class="btn btn-outline-success" href="log-in.php" style= "margin-right:5px">Log In</a>
-                <a class="btn btn-outline-success" href="signup.php">Sign Up</a>
+                <a class="btn btn-outline-info" href="log-in.php" style= "margin-right:5px;font-weight:650">Log In</a>
+                <a class="btn btn-outline-warning" href="signup.php" style=font-weight:650>Sign Up</a>
               </div>
             </div>
           </nav>
@@ -104,11 +101,11 @@ session_start();
         </div>
     </section>
       <hr>
-    <footer class="text-center text-lg-start" style="background-color: #db6930;">
+      <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/">Blood Bank Official</a>
+      <div class="text-center p-3" style="color: white;font-weight:600">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

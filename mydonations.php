@@ -100,7 +100,7 @@ session_start();
             </tr>
         </thead>
             <?php
-            $q=$db->query("SELECT * FROM all_time_donations WHERE username='$username'");
+            $q=$db->query("SELECT * FROM approved_donations WHERE username='$username'");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 ?>
@@ -122,12 +122,11 @@ session_start();
 
     
     <hr>
-    <footer class="text-center text-lg-start" style="background-color: #db6930;">
+    <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
-      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/">Blood Bank Official</a>
-        
+        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

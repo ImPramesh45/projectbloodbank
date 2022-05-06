@@ -44,7 +44,7 @@ session_start();
                     </a>
                   </li>         
                 </ul>
-                <a class="btn btn-outline-success" href="log-in.php">Sign In</a>             
+                <a class="btn btn-outline-info" href="log-in.php">Sign In</a>             
               </div>
             </div>
           </nav>
@@ -229,7 +229,7 @@ session_start();
                     </div>
       
                     <div class="mt-4 pt-2">
-                      <input class="btn btn-primary btn-lg" type="submit" name="sub" value="Submit"/>
+                      <input class="btn btn-warning btn-lg" type="submit" name="sub" value="Sign Up"/>
                     </div>
       
                   </form>
@@ -290,14 +290,13 @@ session_start();
         </div>
     </section>
     
-            <footer class="text-center text-lg-start" style="background-color: #db6930;">
-            <!-- Copyright -->
-            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2022 Copyright:
-                <a class="text-dark" href="https://prameshd.com.np/">Blood Bank Official</a>
-        
-            </div>
-            <!-- Copyright -->
-            </footer>
+    <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
+      <!-- Copyright -->
+      <div class="text-center p-3" style="color: white;font-weight:600">
+        © 2022 Copyright:
+        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
 </body>
 </html>

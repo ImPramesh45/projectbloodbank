@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+#nav-bar {
+    position:sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar {
+    padding-bottom: 0 !important;
+}
+
+
+.container-fluid {
+    background-image: linear-gradient(to right, #1c867e,#3b4138);
+}
+
+.navbar-nav li {
+    padding: 0 10px;
+}
+
+.navbar-nav li a {
+    margin-top: 4px;
+    color: rgb(56, 54, 71) !important;
+    font-weight: 700;
+    border-radius: 12px;
+    
+}
+
+.navbar-nav li a:hover{
+    background-color:rgb(145, 211, 216) ;
+    border-radius: 12px;
+}
+
+
+
+.fa-bars {
+    color: white;
+    font-size: 30px !important;
+}
+
+/*-----------BANNER SECTION----------------*/
+
+#banner {
+    background-image: linear-gradient(to right, #a517ba,#5f1782);
+    color: #fff;
+    padding-top: 1%;
+}
+
+
+.promo-title {
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 100px;
+}
+
+#banner a {
+
+    color: white;
+    text-decoration: none;
+}
+.img-fluid {
+    margin-right: 0 !important;
+}
+
+#nav-bar #loghover a:hover{
+    background-color: red;
+}
+
+
+.mainn{
+    width: 100%;
+    max-height: 150vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c52a1;
+    margin-top: 20px;
+}
+
+.profile-card{
+    position: relative;
+    width: 200px;
+    height: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 22px #3336;
+    transition: .6s;
+    margin: 50px 10px;
+}
+
+.profile-card:hover{
+    border-radius: 10px;
+    height: 260px;
+}
+
+
+.profile-card .img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s;
+
+}
+
+.profile-card:hover .img{
+    transform: translateY(-60px);
+}
+
+.img img{
+    width: 100%;
+    border-radius: 50%;
+    transition: .6s;
+
+}
+
+.profile-card:hover img{
+    border-radius: 10px;
+
+}
+
+.caption{
+    text-align: center;
+    transform: translateY(-80px);
+    opacity: 0;
+    transition: .6s;
+}
+
+.profile-card:hover .caption{
+    opacity: 1;
+}
+
+
+.caption h3{
+    font-size: 21px;
+
+}
+
+.caption p{
+    font-size: 16px;
+    color: #0c52a1;
+    margin: 2px 0 6px 0;
+}
+
+
+.caption .social-links a{
+    color: #3333;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+.social-links a:hover{
+    color: #0c52a1;
+    transition: .6s;
+}

@@ -124,7 +124,7 @@ session_start();
       
                         <div class="form-outline datepicker w-100">
                           <input
-                            type="text" name="dob"
+                            type="date" name="dob"
                             class="form-control form-control-lg"
                             id="birthDate" required
                           />
@@ -177,7 +177,7 @@ session_start();
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
-                          <input type="age" name="age" id="age" class="form-control form-control-lg" required />
+                          <input type="number" name="age" id="age" class="form-control form-control-lg" required />
                           <label class="form-label" for="age">Age</label>
                         </div>
       

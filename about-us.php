@@ -97,7 +97,6 @@ session_start();
                     </p>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary">All Services</button>
         </div>
     </section>
       <hr>

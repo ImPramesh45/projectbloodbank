@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -106,7 +107,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     display: block;
-    transform:translateY(63px)
+    transform:translateY(63px);
 }
 
 .title::after {
@@ -147,4 +148,13 @@ body {
 
   .form_error input {
     border: 1px solid #D83D5A;
+  }
+
+  .mainn{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #0c52a1;
   }

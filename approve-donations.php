@@ -5,6 +5,7 @@ include('connection.php');
     if(isset($_POST['approve']))
     {
     $id = $_POST['approve'];
+    $donationdate = $_POST['approve'];
 
     try{
         $query = "INSERT INTO stock_blood_list (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id;INSERT INTO approved_donations (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id; DELETE FROM blood_donations WHERE id=:id";

@@ -100,7 +100,7 @@ session_start();
 
     
     <h1><center>All Donations</center></h1>
-  
+    <hr>
     <div style="overflow-x:auto;">
       <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
         <thead>
@@ -142,76 +142,7 @@ session_start();
             ?>
       </table>
     </div>
-
-    <section id="services" style="height:10px">
-        <div class="container text-center">
-            <h1 class="title">OUR SERVICES</h1>
-        </div>
-    </section>
-    <br>
-    <section class="wh-150 gradient-custom">
-    <div class="container containerr ">
-      <div class="row">
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="donor-reg.php">&nbsp;DONOR REGISTRATION&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="all-requests.php">&nbsp;BLOOD REQUESTS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="stock-blood-list.php">&nbsp;STOCK BLOOD LIST&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <br>
-      <div class="row">
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="user-list.php">&nbsp;USERS LIST&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="all-donations.php">&nbsp;BLOOD DONATIONS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="out-of-stock-blood-list.php">&nbsp;OUT OF STOCK BLOOD LIST&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="all-time-donations.php">&nbsp;ALL TIME DONATIONS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="all-time-requests.php">&nbsp;ALL TIME REQUESTS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <ul style="list-style-type:none;text-align:center">
-            <li><a href="manage-stock.php">&nbsp;MANAGE STOCK&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    </section>
+    <hr>
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">

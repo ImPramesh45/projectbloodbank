@@ -86,40 +86,41 @@ session_start();
     }
     ?>
     <hr>
-    <section class="wh-150 gradient-custom">
-    <div class="container containerr">
-      <div class="row">
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="blood-donate.php">&nbsp;BLOOD DONATE&nbsp;</a>
-            </li>
-          </ul>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/image00.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
         </div>
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="mydonations.php">&nbsp;MY DONATIONS&nbsp;</a>
-            </li>
-          </ul>
+        <div class="carousel-item">
+          <img src="images/image0.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
+        </div>
+        <div class="carousel-item">
+          <img src="images/image1.png" class="d-block w-100" alt="Image" style="max-height:600px">
+        </div>
+        <div class="carousel-item">
+          <img src="images/image2.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
+        </div>
+        <div class="carousel-item">
+          <img src="images/image3.jpeg" class="d-block w-100" alt="Image" style="max-height:600px">
         </div>
       </div>
-      <br>
-      <div class="row">
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="blood-request.php">&nbsp;BLOOD REQUEST&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-6">
-          <ul style="list-style-type:none">
-            <li><a href="myrequests.php">&nbsp;MY REQUESTS&nbsp;</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-    </section>
-    
+    <hr>
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">

@@ -36,15 +36,14 @@ session_start();
                     <a class="nav-link" href="#">Notices</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="contact-us.php">Contact Us</a>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact Us</a>
-                    </a>
-                  </li>         
+                  <a class="btn btn-outline-info" href="admin-login.php" style= "margin-right:5px;font-weight:650">Admin Login</a>
+                  </li>        
                 </ul>
-                <a class="btn btn-outline-info" href="log-in.php">Sign In</a>             
+                <a class="btn btn-outline-info" href="log-in.php" style= "margin-right:5px;font-weight:650">Log In</a>             
               </div>
             </div>
           </nav>
@@ -84,7 +83,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="text" name="fname" id="firstName" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="firstName">First Name</label>
+                          <label class="form-label" for="firstName" style="font-weight:600">First Name</label>
                         </div>
       
                       </div>
@@ -92,7 +91,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="text" name="lname" id="lastName" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="lastName">Last Name</label>
+                          <label class="form-label" for="lastName" style="font-weight:600">Last Name</label>
                         </div>
       
                       </div>
@@ -107,7 +106,7 @@ session_start();
                             class="form-control form-control-lg"
                             id="birthDate"
                             required/>
-                          <label for="birthdayDate" class="form-label">Date of Birth</label>
+                          <label for="birthdayDate" class="form-label" style="font-weight:600">Date of Birth</label>
                         </div>
       
                       </div>
@@ -124,7 +123,7 @@ session_start();
                             value="Female"
                             checked
                           />
-                          <label class="form-check-label" for="femaleGender">Female</label>
+                          <label class="form-check-label" for="femaleGender" style="font-weight:600">Female</label>
                         </div>
       
                         <div class="form-check form-check-inline">
@@ -135,7 +134,7 @@ session_start();
                             id="maleGender"
                             value="Male"
                           />
-                          <label class="form-check-label" for="maleGender">Male</label>
+                          <label class="form-check-label" for="maleGender" style="font-weight:600">Male</label>
                         </div>
       
                         <div class="form-check form-check-inline">
@@ -146,7 +145,7 @@ session_start();
                             id="otherGender"
                             value="Other"
                           />
-                          <label class="form-check-label" for="otherGender">Other</label>
+                          <label class="form-check-label" for="otherGender" style="font-weight:600">Other</label>
                         </div>
       
                       </div>
@@ -157,7 +156,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="number" name="age" id="age" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="age">Age</label>
+                          <label class="form-label" for="age" style="font-weight:600">Age</label>
                         </div>
       
                       </div>
@@ -165,7 +164,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="address" name="address" id="address" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="address">Address</label>
+                          <label class="form-label" for="address" style="font-weight:600">Address</label>
                         </div>
       
                       </div>
@@ -176,7 +175,7 @@ session_start();
       
                         <div class="form-outline" >
                           <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="emailAddress">Email</label>
+                          <label class="form-label" for="emailAddress" style="font-weight:600">Email</label>
                         </div>
       
                       </div>
@@ -184,7 +183,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="tel" name="phone" id="phoneNumber" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="phoneNumber">Phone Number</label>
+                          <label class="form-label" for="phoneNumber" style="font-weight:600">Phone Number</label>
                         </div>
       
                       </div>
@@ -195,7 +194,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="text" name="username" id="userrname"class="form-control form-control-lg" required/>
-                          <label class="form-label" for="Username">Username</label>
+                          <label class="form-label" for="Username" style="font-weight:600">Username</label>
                         </div>
       
                       </div>
@@ -203,7 +202,7 @@ session_start();
       
                         <div class="form-outline">
                           <input type="password" name="password" id="passsword" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="password">Password</label>
+                          <label class="form-label" for="password" style="font-weight:600">Password</label>
                         </div>
       
                       </div>
@@ -223,7 +222,7 @@ session_start();
                           <option>O+</option>
                           <option>O-</option>
                         </select>
-                        <label class="form-label select-label">Select Your Blood Group</label>
+                        <label class="form-label select-label" style="font-weight:600">Select Your Blood Group</label>
       
                       </div>
                     </div>

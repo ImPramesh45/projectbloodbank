@@ -38,10 +38,6 @@ session_start();
                     <a class="nav-link" href="#">Notices</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
-                    </a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
                     </a>
                   </li>       

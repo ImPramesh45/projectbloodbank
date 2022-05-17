@@ -115,8 +115,7 @@ session_start();
                         <td><center><button type="submit" name="" value="#" class="btn btn-danger">Approved</button></center></td>
                     </tr>
                 </tbody>
-                }
-                        <?php
+                <?php
             }
             ?>
 

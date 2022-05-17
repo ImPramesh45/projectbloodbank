@@ -32,9 +32,6 @@ session_start();
                     <a class="nav-link" href="notices.php">Notices</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="about-us.php">About Us</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
                   </li>
                   <li class="nav-item">
@@ -63,8 +60,7 @@ session_start();
             </div>
         </div>
     </section>
-
-<br>
+    <hr>
     <h2><center><u>OUR TEAM</u></center></h2>
 
         <div class="container" style="width:100%">

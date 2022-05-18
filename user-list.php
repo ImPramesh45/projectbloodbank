@@ -23,7 +23,7 @@ session_start();
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="admin-home.php">BLOODBANK</a>
+              <a class="navbar-brand" href="admin-home.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
@@ -52,6 +52,9 @@ session_start();
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
                       <li><a class="dropdown-item" href="manage-stock.php">MANAGE STOCK</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="approved-blood-donations.php">APPROVED DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="confirmed-blood-requests.php">CONFIRMED REQUESTS</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
                       <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>

@@ -23,46 +23,37 @@ session_start();
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="admin-home.php" style="font-weight:600">BLOODBANK</a>
+                <a class="navbar-brand" href="user-home.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-2">
                   <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="admin-home.php">Home</a>
+                    <a class="nav-link" aria-current="page" href="user-home.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="donor-reg.php">Donor Registration</a>
+                    <a class="nav-link" href="blood-donate.php">Blood Donate</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="all-requests.php">Blood Requests</a>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="all-donations.php">Blood Donations</a>
+                    <a class="nav-link" href="blood-request.php">Blood Request</a>
                     </a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Admin Panel
+                      My Tasks
                     </a>
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
-                      <li><a class="dropdown-item" href="user-list.php">USERS LIST</a></li>
+                      <li><a class="dropdown-item" href="mydonations.php">MY DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="myrequests.php">MY REQUESTS</a></li>
                       <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
-                      <li><a class="dropdown-item" href="manage-stock.php">MANAGE STOCK</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="approved-blood-donations.php">APPROVED DONATIONS</a></li>
-                      <li><a class="dropdown-item" href="confirmed-blood-requests.php">CONFIRMED REQUESTS</a></li>
-                      <li><hr class="dropdown-divider"></li>
-                      <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
-                      <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
+                      <li><a class="dropdown-item" href="mydonations-pending.php">PENDING DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="myrequests-pending.php">PENDING REQUESTS</a></li>
                     </ul>
-                  </li>     
+                  </li>        
                 </ul>
-                <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
-                <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
+                <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, User</h4>
+                <a class="btn btn-outline-info" href="user-logout.php" style="font-weight:650">Logout</a>
                 
                 
                 
@@ -77,7 +68,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
+                    <a class ="promo-title"href="user-home.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">
@@ -89,17 +80,15 @@ session_start();
 
     <!------------------body section------------------->
 
-
     <?php
-    $un=$_SESSION['un'];
-    if(!$un)
+    $username=$_SESSION['username'];
+    if(!$username)
     {
-        header("Location:index.php");
+        header("Location:log-in.php");
     }
     ?>
 
-    
-    <h1><center>Approved Donations</center></h1>
+    <h1><center>Pending Donations</center></h1>
     <hr>
     <div style="overflow-x:auto;">
       <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
@@ -110,10 +99,11 @@ session_start();
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Blood Group</center></th>
                 <th scope="col"><center>Donation Date</center></th>
+                <th scope="col"><center>Status</center></th>
             </tr>
         </thead>
             <?php
-            $q=$db->query("SELECT * FROM approved_donations");
+            $q=$db->query("SELECT * FROM blood_donations WHERE username='$username'");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 ?>
@@ -124,15 +114,18 @@ session_start();
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
                         <td><center><?= $r1->donationdate; ?></center></td>
+                        <td><center><button type="submit" name="" value="#" class="btn btn-danger">Pending</button></center></td>
                     </tr>
                 </tbody>
                 <?php
             }
             ?>
+
       </table>
     </div>
+
+    
     <hr>
-    </section>
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">

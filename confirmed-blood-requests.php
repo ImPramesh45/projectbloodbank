@@ -77,7 +77,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
+                    <a class ="promo-title"href="admin-home.php" style="font-weight:600">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">
@@ -110,7 +110,7 @@ session_start();
                 <th scope="col"><center>Last Name</center></th>
                 <th scope="col"><center>Username</center></th>
                 <th scope="col"><center>Blood Group</center></th>
-                <th scope="col"><center>Donation Date</center></th>
+                <th scope="col"><center>Request Date</center></th>
             </tr>
         </thead>
             <?php
@@ -125,7 +125,7 @@ session_start();
                         <td><center><?= $r1->lname; ?></center></td>
                         <td><center><?= $r1->username; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
-                        <td><center><?= $r1->donationdate; ?></center></td>
+                        <td><center><?= $r1->requestdate; ?></center></td>
                     </tr>
                 </tbody>
                 <?php

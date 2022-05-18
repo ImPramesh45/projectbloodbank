@@ -23,7 +23,7 @@ session_start();
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="user-home.php">BLOODBANK</a>
+                <a class="navbar-brand" href="user-home.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
@@ -45,8 +45,10 @@ session_start();
                     </a>
                     <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="mydonations.php">MY DONATIONS</a></li>
-                      <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="myrequests.php">MY REQUESTS</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="mydonations-pending.php">PENDING DONATIONS</a></li>
+                      <li><a class="dropdown-item" href="myrequests-pending.php">PENDING REQUESTS</a></li>
                     </ul>
                   </li>        
                 </ul>

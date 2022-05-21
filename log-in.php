@@ -57,7 +57,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                <a class ="promo-title"href="index.php">BLOODBANK</a>
+                <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">
@@ -75,7 +75,7 @@ session_start();
           <div class="row justify-content-center align-items-center h-100">
             <div class="col-14 col-lg-9 col-xl-7">
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px">
-                <div class="card-body p-4 p-md-3" style="background: linear-gradient(to right, #0099f7, #f11712); color:white; text-align:center">
+                <div class="card-body p-4 p-md-3" style="background: linear-gradient(to right, #0099f7, #f11712); color:white; text-align:center;border:1px solid gray;border-radius:15px">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><center><u>User Login</u></center></h3>
                     <form action="" method="post" style="margin: auto; width: 250px;">
                       <div class="mb-3">

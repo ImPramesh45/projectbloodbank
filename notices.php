@@ -57,7 +57,7 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                <a class ="promo-title"href="index.php">BLOODBANK</a>
+                <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
                 <div class="col-md-6 text-center">

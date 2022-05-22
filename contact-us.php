@@ -11,7 +11,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
     <link rel="stylesheet" href="css/aboutstyle.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
     <script src="https://kit.fontawesome.com/caec819051.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -61,6 +62,62 @@ session_start();
         </div>
     </section>
     <hr>
+    <form action="" method="POST">
+        <div class="container" style="max-width:80%; background: linear-gradient(to right, #3a6186, #89253e);padding:4px">
+            <div class="title mb-3">
+                <h2 style="text-align:center;color:white"><u>Contact Us</u></h2>
+            </div>
+            <span class="title mb-3">
+                <h5 style="text-align:center;color:white;margin:10px">Email us with any questions or inquiries or call 011-111111. We would be happy to answer your questions and set up a meeting with you.</h5>
+            </span>
+            <br>
+            <br>
+            <div class="input-group mb-3">
+              <input type="text" name="fname" id="firstname" class="form-control form-control-lg" placeholder="First Name"  aria-describedby="basic-addon2" required/> &nbsp;
+              <input type="text" name="lname" id="lastname" class="form-control form-control-lg" placeholder="Last Name" aria-describedby="basic-addon2" required/>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" placeholder="Email" aria-describedby="basic-addon2" required/>
+              <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">Message</span>
+              <textarea class="form-control" name="message" placeholder=""></textarea>
+            </div>
+            <div class="mt-4 pt-2">
+            <input class="btn btn-primary btn-lg" type="submit" name="submitt" value="Send" style="color:white;width:50%; font-size:22px; font-weight:700;margin:0% 25%"/>
+            </div>
+        </div>
+    </form>
+    <?php
+        if (isset($_POST['submitt']))
+        {
+            $fname=$_POST['fname'];
+            $lname=$_POST['lname'];
+            $email=$_POST['email'];
+            $message=$_POST['message'];
+            $msgdate=$_POST['msgdate'];
+            $q=$db->prepare("INSERT INTO contact_message(fname,lname,email,message,msgdate) VALUES(:fname,:lname,:email,:message,:msgdate)");
+            $q->bindValue('fname',$fname);
+            $q->bindValue('lname',$lname);
+            $q->bindValue('email',$email);
+            $q->bindValue('message',$message);
+            $q->bindValue('msgdate',$msgdate);
+            if($q->execute())
+            {
+              echo "<script>alert('Message Sent Successfully')</script>";
+              echo("<script>window.location = 'index.php';</script>");
+            }
+            else
+            { 
+              echo "<script>alert('Message Sending Failed')</script>";
+            }
+        }
+    ?>
+    <hr>
+
     <h2><center><u>OUR TEAM</u></center></h2>
 
         <div class="container" style="width:100%">
@@ -129,6 +186,6 @@ session_start();
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
 </html>

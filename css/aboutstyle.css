@@ -87,6 +87,11 @@ body {
     margin-top: 20px;
 }
 
+.contactformstyle{
+    background-color: #0c52a1;
+}
+
+
 .profile-card{
     position: relative;
     width: 200px;

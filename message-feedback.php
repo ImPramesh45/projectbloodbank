@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 session_start();
 ?>
@@ -8,7 +9,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>Blood Bank</title>
 
     <link rel="stylesheet" href="css/admstyle.css">
 
@@ -61,7 +62,7 @@ session_start();
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="message-feedback.php">Messages/Feedbacks</a></li>
                     </ul>
-                  </li>       
+                  </li>      
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
                 <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
@@ -96,82 +97,40 @@ session_start();
     $un=$_SESSION['un'];
     if(!$un)
     {
-        header("Location:index.php");
+        header('Location:index.php');
     }
     ?>
 
-
-    <h1><center>Users Lists</center></h1>
+    
+    <h1><center>Messages / Feedbacks</center></h1>
     <hr>
+    
     <div style="overflow-x:auto;">
-    <table class="table table-striped table-dark w-auto" style="width:80%; margin:0% auto">
+      <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
         <thead>
             <tr>
                 <th scope="col"><center>ID</center></th>
-                <th scope="col"><center>First Name</center></th>
-                <th scope="col"><center>Last Name</center></th>
-                <th scope="col"><center>Date of Birth</center></th>
-                <th scope="col"><center>Gender</center></th>
-                <th scope="col"><center>Age</center></th>
-                <th scope="col"><center>Address</center></th>
                 <th scope="col"><center>Email</center></th>
-                <th scope="col"><center>Phone</center></th>
-                <th scope="col"><center>Username</center></th>
-                <th scope="col"><center>Password</center></th>
-                <th scope="col"><center>Blood Group</center></th>
+                <th scope="col"><center>Message</center></th>
             </tr>
         </thead>
             <?php
-            $q=$db->query("SELECT * FROM user_registration");
+            $q=$db->query("SELECT * FROM contact_message");
             while($r1=$q->fetch(PDO::FETCH_OBJ))
             {
                 ?>
                 <tbody>
                     <tr class="table-info">
-                        <th scope="row"><center><?= $r1->id; ?></center></th>
-                        <td><center><?= $r1->fname; ?></center></td>
-                        <td><center><?= $r1->lname; ?></center></td>
-                        <td><center><?= $r1->dob; ?></center></td>
-                        <td><center><?= $r1->gender; ?></center></td>
-                        <td><center><?= $r1->age; ?></center></td>
-                        <td><center><?= $r1->address; ?></center></td>
+                        <td><center><?= $r1->id; ?></center></td>
                         <td><center><?= $r1->email; ?></center></td>
-                        <td><center><?= $r1->phone; ?></center></td>
-                        <td><center><?= $r1->username; ?></center></td>
-                        <td><center><?= $r1->password; ?></center></td>
-                        <td><center><?= $r1->bgroup; ?></center></td>
+                        <td><center><?= $r1->message; ?></center></td>
                     </tr>
                 </tbody>
                         <?php
             }
             ?>
 
-            <?php
-            $q=$db->query("SELECT * FROM donor_registration");
-            while($r1=$q->fetch(PDO::FETCH_OBJ))
-            {
-                ?>
-                <tbody>
-                    <tr class="table-info">
-                        <th scope="row"><center><?= $r1->id; ?></center></th>
-                        <td><center><?= $r1->fname; ?></center></td>
-                        <td><center><?= $r1->lname; ?></center></td>
-                        <td><center><?= $r1->dob; ?></center></td>
-                        <td><center><?= $r1->gender; ?></center></td>
-                        <td><center><?= $r1->age; ?></center></td>
-                        <td><center><?= $r1->address; ?></center></td>
-                        <td><center><?= $r1->email; ?></center></td>
-                        <td><center><?= $r1->phone; ?></center></td>
-                        <td><center><?= $r1->username; ?></center></td>
-                        <td><center><?= $r1->password; ?></center></td>
-                        <td><center><?= $r1->bgroup; ?></center></td>
-                    </tr>
-                </tbody>
-                        <?php
-            }
-            ?>
-
-    </table>
+      </table>
     </div>
     <hr>
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">

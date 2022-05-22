@@ -58,6 +58,8 @@ session_start();
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="all-time-donations.php">ALL TIME DONATIONS</a></li>
                       <li><a class="dropdown-item" href="all-time-requests.php">ALL TIME REQUESTS</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="message-feedback.php">Messages/Feedbacks</a></li>
                     </ul>
                   </li>     
                 </ul>

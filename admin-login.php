@@ -20,7 +20,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 
 </head>
-<body>
+<body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -35,7 +35,7 @@ session_start();
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Notices</a>
+                    <a class="nav-link" href="notices.php">Notices</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
@@ -64,7 +64,7 @@ session_start();
             </div>
         </div>
     </section>
-
+<hr>
     <!-------------Body Section ------------------->
 
     <div id="body">
@@ -73,7 +73,7 @@ session_start();
           <div class="row justify-content-center align-items-center h-100">
             <div class="col-14 col-lg-9 col-xl-7">
               <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-                <div class="card-body p-4 p-md-3" style="background: linear-gradient(to right, #0099f7, #f11712); color:white; text-align:center;border:1px solid gray;border-radius:15px">
+                <div class="card-body p-4 p-md-3" style="background: linear-gradient(to right, #0099f7, #f11712); color:white; text-align:center;border-radius:15px">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><center><u>Login as Admin</u></center></h3>
                     <form action="" method="post" style="margin: auto; width: 250px;">
                       <div class="mb-3">

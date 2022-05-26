@@ -18,7 +18,7 @@ session_start();
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
-<body>
+<body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">

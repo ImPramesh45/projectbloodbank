@@ -15,7 +15,7 @@ session_start();
   </head>
     <script src="https://kit.fontawesome.com/caec819051.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -86,8 +86,8 @@ session_start();
               <span class="input-group-text">Message</span>
               <textarea class="form-control" name="message" placeholder=""></textarea>
             </div>
-            <div class="mt-4 pt-2">
-            <input class="btn btn-primary btn-lg" type="submit" name="submitt" value="Send" style="color:white;width:50%; font-size:22px; font-weight:700;margin:0% 25%"/>
+            <div class="input-group mb-3">
+            <input class="btn btn-success btn-lg" type="submit" name="submitt" value="Send" style="color:white;width:50%; font-size:22px; font-weight:700;margin:0% 25%"/>
             </div>
         </div>
     </form>

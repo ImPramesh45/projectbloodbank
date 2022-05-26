@@ -20,7 +20,7 @@ session_start();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 
 </head>
-<body>
+<body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -68,35 +68,43 @@ session_start();
     </section>
 
     <!-------------Body Section ------------------->
-
-  <div id="body">
-
+<hr>
     <!-------------service section ----------------->
 
     <section id="services">
         <div class="container text-center">
-            <h1 class="title">OUR SERVICES</h1>
+          <h4 style="font-weight:700"><u>WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</u></h4>
             <div class="row text-center">
                 <div class="col-md-4 services">
-                    <img src="images/counselor.png" alt="counselor" class="service-img">
-                    <h4>Counselling</h4>
-                    <p>Personal issues, a lack of career direction, and poor study strategies can all impact your ability to succeed. Counsellors can help you develop study skills and assist in working through your personal problems so you can better focus on school.</p>
+                    <img src="images/img1.png" alt="counselor" class="service-img">
+                    <h4>Our Motto</h4>
+                    <p style="font-size:18px">Our motto "Delivering a million smiles" means we keep customers at the center of our decisions. This customer focus has helped in delivering exceptional value to our clients and has made us the logistics partner of choice for some of the most trusted brands in Nepal.</p>
                 </div>
                 <div class="col-md-4 services">
-                    <img src="images/career.png" alt="counselor" class="service-img">
-                    <h4>Career Centers</h4>
-                    <p>Most schools provide job search coaching and can review your résumé and cover letter. Some also have an on-campus recruitment program where employers conduct interviews on campus. Many Career Centres offer opportunities to meet employers, including job fairs, employer information sessions, and networking events. Some schools have a job board for on-campus and off-campus work.</p>
+                    <img src="images/img2.png" alt="counselor" class="service-img">
+                    <h4>Team</h4>
+                    <p style="font-size:18px">Our team's e-commerce roots have equipped us with in-depth knowledge about the operational and logistics requirement in the fast-paced e-commerce industry. Our service industry background defines our customer first approach and everyone at BBMS is a CDO, Chief Delivery Officer.</p>
                 </div>
                 <div class="col-md-4 services">
-                    <img src="images/aid.png" alt="counselor" class="service-img">
-                    <h4>Financial Aid</h4>
-                    <p>The Financial Aid office offers assistance with paying for your education. Financial aid includes student loans, bursaries and scholarships. Some schools also offer emergency bursaries or loans.  
-                    </p>
+                    <img src="images/img3.png" alt="counselor" class="service-img">
+                    <h4>Vision</h4>
+                    <p style="font-size:18px">The vision of becoming an industry leader in providing reliable, time-bound logistics and supply-chain solutions to its business partners. Our network reach, state of the art technology platform and hands-on approach make us one of the fastest growing teams in Nepal.</p>
                 </div>
             </div>
-            <button type="button" class="btn btn-primary">All Services</button>
         </div>
     </section>
+<hr>
+    <section>
+        <div class="container text-center">
+            <div class="row text-center">
+                <div class="col-md-12 services">
+                    <h4 style="font-weight:600"><u>ABOUT BLOOD BANK</u></h4>
+                    <p style="font-size:18px"><img src="images/doubleinv.png" alt="" style= "max-height:30px;max-width:30px">&nbsp;&nbsp; A blood bank is a cache or bank of blood or blood components, gathered as a result of blood donation or collection, stored and preserved for later use in blood transfusion. The term "blood bank" typically refers to a division of a hospital where storage of blood product occurs and where proper testing is performed(to reduce the risk of transfusion related adverse events). However, it sometimes refers to a collection center, and indeed some hospitals also perform collection. &nbsp;&nbsp;<img src="images/doubleinv2.png" alt="" style= "max-height:30px;max-width:30px"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
       <hr>
       <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->

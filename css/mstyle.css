@@ -21,7 +21,7 @@ body {
 
 
 .container-fluid {
-    background-image: linear-gradient(to right, #1c867e,#3b4138);
+    background-image: none;
 }
 
 .navbar-nav li {
@@ -30,14 +30,14 @@ body {
 
 .navbar-nav li a {
     margin-top: 4px;
-    color: rgb(56, 54, 71) !important;
+    color: rgb(255, 255, 255) !important;
     font-weight: 700;
     border-radius: 12px;
     
 }
 
 .navbar-nav li a:hover{
-    background-color:rgb(145, 211, 216) ;
+    background-color:rgb(51, 160, 89) ;
     border-radius: 12px;
 }
 
@@ -96,10 +96,6 @@ body {
 }
 
 
-#nav-bar #loghover a:hover{
-    background-color: red;
-}
-
 .form_error span {
     width: 80%;
     height: 35px;
@@ -111,4 +107,3 @@ body {
   .form_error input {
     border: 1px solid #D83D5A;
   }
-

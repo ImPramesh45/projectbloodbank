@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include('connection.php');
 session_start();
 ?>
@@ -15,12 +16,11 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
 </head>
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
-<section id="nav-bar">
+    <section id="nav-bar">
         <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="admin-home.php"style="font-weight:600">BLOODBANK</a>
@@ -91,53 +91,37 @@ session_start();
 
     <!------------------body section------------------->
 
-
     <?php
     $un=$_SESSION['un'];
     if(!$un)
     {
-        header("Location:index.php");
+        header("Location:admin-login.php");
+        ob_end_flush();
     }
     ?>
-
-    
-    <h1><center>Approved Donations</center></h1>
     <hr>
-    <div style="overflow-x:auto;">
-      <table class="table table-striped table-dark" style="width:80%; margin:0% auto">
-        <thead>
-            <tr>
-                <th scope="col"><center>ID</center></th>
-                <th scope="col"><center>Full Name</center></th>
-                <th scope="col"><center>Blood Group</center></th>
-                <th scope="col"><center>Donation Date</center></th>
-            </tr>
-        </thead>
-            <?php
-            $q=$db->query("SELECT * FROM approved_donations");
-            while($r1=$q->fetch(PDO::FETCH_OBJ))
-            {
-                ?>
-                <tbody>
-                    <tr class="table-info">
-                        <td><center><?= $r1->id; ?></center></td>
-                        <td><center><?= $r1->fullname; ?></center></td>
-                        <td><center><?= $r1->bgroup; ?></center></td>
-                        <td><center><?= $r1->donationdate; ?></center></td>
-                    </tr>
-                </tbody>
-                <?php
-            }
-            ?>
-      </table>
-    </div>
-    <hr>
+    <section>
+        <div class="row" style="margin: 0 auto;">
+            <div class="col-md-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="images/success.png" alt="success" style="max-height:200px"> <BR></BR>
+                        <p class="card-text" style="font-size:26px; font-weight:700;">BLOOD REQUEST HAS BEEN CONFIRMED SUCCESSFULLY !!!</p> <br>
+                        <a href="admin-home.php" class="btn btn-success" style="font-weight:600">Return Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
     </section>
+    <hr>
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
         <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
+        
       </div>
       <!-- Copyright -->
     </footer>

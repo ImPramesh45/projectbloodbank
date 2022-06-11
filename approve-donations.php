@@ -8,14 +8,13 @@ include('connection.php');
     $donationdate = $_POST['approve'];
 
     try{
-        $query = "INSERT INTO stock_blood_list (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id;INSERT INTO approved_donations (fname,lname,username,donationdate,bgroup) SELECT fname,lname,username,donationdate,bgroup FROM blood_donations WHERE id=:id; DELETE FROM blood_donations WHERE id=:id";
+        $query = "INSERT INTO stock_blood_list (fullname,username,donationdate,bgroup) SELECT fullname,username,donationdate,bgroup FROM blood_donations WHERE id=:id;INSERT INTO approved_donations (fullname,username,donationdate,bgroup) SELECT fullname,username,donationdate,bgroup FROM blood_donations WHERE id=:id; DELETE FROM blood_donations WHERE id=:id";
         $statement = $db->prepare($query);
         $data = [':id' => $id];
         $query_execute =  $statement->execute($data);
         if($query_execute)
         {    
-            echo "<script>alert('Blood Donation Approved')</script>";
-            echo("<script>window.location = 'all-donations.php';</script>");
+            echo("<script>window.location = 'don-approved.php';</script>");
         }
         else
         {

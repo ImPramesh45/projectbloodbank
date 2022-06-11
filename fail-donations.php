@@ -13,8 +13,7 @@ if(isset($_POST['failed']))
        $query_execute =  $statement->execute($data);
        if($query_execute)
        {
-            echo "<script>alert('Blood Donation Failed')</script>";
-            echo("<script>window.location = 'all-donations.php';</script>");
+            echo("<script>window.location = 'don-failed.php';</script>");
        }
        else
        {

@@ -13,8 +13,7 @@ if(isset($_POST['cancel']))
        $query_execute =  $statement->execute($data);
        if($query_execute)
        {
-            echo "<script>alert('Blood Request Cancelled')</script>";
-            echo("<script>window.location = 'all-requests.php';</script>");
+            echo("<script>window.location = 'req-cancelled.php';</script>");
        }
        else
        {

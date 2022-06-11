@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
 
-    <link rel="stylesheet" href="css/admstyle.css">
+    <link rel="stylesheet" href="css/adminstyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +21,7 @@ session_start();
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="admin-home.php"style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -47,7 +47,7 @@ session_start();
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Admin Panel
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="user-list.php">USERS LIST</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
@@ -76,11 +76,14 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
+                <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
@@ -107,19 +110,19 @@ session_start();
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/image00.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
+          <img src="images/image00.jpg" class="d-block w-100" alt="Image" style="max-height:400px">
         </div>
         <div class="carousel-item">
-          <img src="images/image0.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
+          <img src="images/image0.jpg" class="d-block w-100" alt="Image" style="max-height:400px">
         </div>
         <div class="carousel-item">
-          <img src="images/image1.png" class="d-block w-100" alt="Image" style="max-height:600px">
+          <img src="images/image1.png" class="d-block w-100" alt="Image" style="max-height:400px">
         </div>
         <div class="carousel-item">
-          <img src="images/image2.jpg" class="d-block w-100" alt="Image" style="max-height:600px">
+          <img src="images/image2.jpg" class="d-block w-100" alt="Image" style="max-height:400px">
         </div>
         <div class="carousel-item">
-          <img src="images/image3.jpeg" class="d-block w-100" alt="Image" style="max-height:600px">
+          <img src="images/image3.jpeg" class="d-block w-100" alt="Image" style="max-height:400px">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -136,7 +139,7 @@ session_start();
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+        <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
         
       </div>
       <!-- Copyright -->

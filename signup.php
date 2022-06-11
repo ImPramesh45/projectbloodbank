@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
 
-    <link rel="stylesheet" href="css/admstyle.css">
+    <link rel="stylesheet" href="css/mstyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -21,7 +21,7 @@ session_start();
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,17 +33,17 @@ session_start();
                     <a class="nav-link" aria-current="page" href="index.php">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Notices</a>
+                    <a class="nav-link" href="notices.php">Notices</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="contact-us.php">Contact Us</a>
-                    </a>
                   </li>
                   <li class="nav-item">
                   <a class="btn btn-outline-info" href="admin-login.php" style= "margin-right:5px;font-weight:650">Admin Login</a>
-                  </li>        
+                  </li>       
                 </ul>
-                <a class="btn btn-outline-info" href="log-in.php" style= "margin-right:5px;font-weight:650">Log In</a>             
+                <a class="btn btn-outline-info" href="log-in.php" style= "margin-right:5px;font-weight:650">Log In</a>
+                <a class="btn btn-outline-warning" href="signup.php" style=font-weight:650>Sign Up</a>
               </div>
             </div>
           </nav>
@@ -55,25 +55,27 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
+                <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
     </section>
 <hr>
     <!------------------body section------------------->
-    
 
     <section class="vh-150 gradient-custom">
         <div class="container py-5 h-100">
           <div class="row justify-content-center align-items-center h-100">
             <div class="col-14 col-lg-9 col-xl-7">
-              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;">
-                <div class="card-body p-4 p-md-3">
+              <div class="card shadow-2-strong card-registration" style="border-radius: 15px;color:white">
+                <div class="card-body p-4 p-md-3"  style="background: linear-gradient(to right, #283048, #859398);border-radius:15px">
                   <h3 class="mb-4 pb-2 pb-md-0 mb-md-5"><center>Sign Up</center></h3>
                   
                   <form action="" method="post">
@@ -152,14 +154,7 @@ session_start();
                     </div>
       
                     <div class="row">
-                      <div class="col-md-6 mb-4 pb-2">
-      
-                        <div class="form-outline">
-                          <input type="number" name="age" id="age" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="age" style="font-weight:600">Age</label>
-                        </div>
-      
-                      </div>
+
                       <div class="col-md-6 mb-4 pb-2">
       
                         <div class="form-outline">
@@ -167,6 +162,13 @@ session_start();
                           <label class="form-label" for="address" style="font-weight:600">Address</label>
                         </div>
       
+                      </div>
+                      <div class="col-md-6 mb-4 pb-2">
+      
+                        <div class="form-outline">
+                          <input type="tel" name="phone" id="phoneNumber" class="form-control form-control-lg" required/>
+                          <label class="form-label" for="phoneNumber" style="font-weight:600">Phone Number</label>
+                        </div>
                       </div>
                     </div>
 
@@ -180,12 +182,18 @@ session_start();
       
                       </div>
                       <div class="col-md-6 mb-4 pb-2">
-      
-                        <div class="form-outline">
-                          <input type="tel" name="phone" id="phoneNumber" class="form-control form-control-lg" required/>
-                          <label class="form-label" for="phoneNumber" style="font-weight:600">Phone Number</label>
-                        </div>
-      
+                        <select class="select form-control-lg" name="bgroup">
+                          <option disabled>Blood Group</option>
+                          <option>A+</option>
+                          <option>A-</option>
+                          <option>B+</option>
+                          <option>B-</option>
+                          <option>AB+</option>
+                          <option>AB-</option>
+                          <option>O+</option>
+                          <option>O-</option>
+                        </select>
+                        <label class="form-label select-label" style="font-weight:600">Select Your Blood Group</label>
                       </div>
                     </div>
 
@@ -203,32 +211,18 @@ session_start();
                         <div class="form-outline">
                           <input type="password" name="password" id="passsword" class="form-control form-control-lg" required/>
                           <label class="form-label" for="password" style="font-weight:600">Password</label>
+                          <label class="form-label" for="password" style="font-weight:600">(must contain 8 characters, uppercase, number and special character)</label>
                         </div>
       
                       </div>
                     </div>
 
                     <div class="row">
-                      <div class="col-12">
-      
-                        <select class="select form-control-lg" name="bgroup">
-                          <option disabled>Blood Group</option>
-                          <option>A+</option>
-                          <option>A-</option>
-                          <option>B+</option>
-                          <option>B-</option>
-                          <option>AB+</option>
-                          <option>AB-</option>
-                          <option>O+</option>
-                          <option>O-</option>
-                        </select>
-                        <label class="form-label select-label" style="font-weight:600">Select Your Blood Group</label>
-      
-                      </div>
+
                     </div>
       
-                    <div class="mt-4 pt-2">
-                      <input class="btn btn-warning btn-lg" type="submit" name="sub" value="Sign Up"/>
+                    <div class="mt-4 pt-2 text-center">
+                      <input class="btn btn-outline-warning btn-lg" type="submit" name="sub" value="Sign Up" style="width:60%; font-weight:600; font-size:24px; border-radius:20px"/>
                     </div>
       
                   </form>
@@ -239,15 +233,22 @@ session_start();
                       $lname=$_POST['lname'];
                       $dob=$_POST['dob'];
                       $gender=$_POST['gender'];
-                      $age=$_POST['age'];
                       $address=$_POST['address'];
                       $email=$_POST['email'];
                       $phone=$_POST['phone'];
                       $username=$_POST['username'];
                       $password=$_POST['password'];
                       $bgroup=$_POST['bgroup'];
-                      $registered_date=$_POST['registered_date'];
-
+                      // Validate password strength
+                      $uppercase = preg_match('@[A-Z]@', $password);
+                      $lowercase = preg_match('@[a-z]@', $password);
+                      $number    = preg_match('@[0-9]@', $password);
+                      $specialChars = preg_match('@[^\w]@', $password);
+                                        
+                      if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+                          echo "<script>alert('Password should be at least 8 characters in length and should include at least one uppercase letter, one number, and one special character.')</script>";
+                      }
+                      else{
                       $vlduser = $db->prepare("SELECT * from user_registration WHERE username=?");
                       $vlduser->execute(array($username));
                       if ( $vlduser->rowCount() > 0 ) {
@@ -255,12 +256,11 @@ session_start();
                         echo("<script>window.location = 'signup.php';</script>");
                       }
                       else{
-                      $q=$db->prepare("INSERT INTO user_registration(fname,lname,dob,gender,age,address,email,phone,username,password,bgroup,registered_date) VALUES(:fname,:lname,:dob,:gender,:age,:address,:email,:phone,:username,:password,:bgroup,:registered_date)");
+                      $q=$db->prepare("INSERT INTO user_registration(fname,lname,dob,gender,address,email,phone,username,password,bgroup,registered_date) VALUES(:fname,:lname,:dob,:gender,:address,:email,:phone,:username,:password,:bgroup,:registered_date)");
                       $q->bindValue('fname',$fname);
                       $q->bindValue('lname',$lname);
                       $q->bindValue('dob',$dob);
                       $q->bindValue('gender',$gender);
-                      $q->bindValue('age',$age);
                       $q->bindValue('address',$address);
                       $q->bindValue('email',$email);
                       $q->bindValue('phone',$phone);
@@ -280,6 +280,7 @@ session_start();
                       }   
                        
                   }
+                }
                   ?>
                   
                 </div>
@@ -293,7 +294,7 @@ session_start();
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+        <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

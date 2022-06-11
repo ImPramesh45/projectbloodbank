@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
     
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mstyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +23,7 @@ session_start();
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +50,6 @@ session_start();
             </div>
           </nav>
     </section>
-
     <!---------------banner section--------------->
 
     <section id="banner">
@@ -60,8 +59,11 @@ session_start();
                 <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
@@ -69,42 +71,105 @@ session_start();
 
     <!-------------Body Section ------------------->
 
-    <!-------------service section -----------------
-
-    <section id="services">
-        <div class="container text-center">
-            <h1 class="title">NOTICES</h1>
-            <div class="row text-center">
-                <div class="col-md-4 services">
-                    <img src="images/counselor.png" alt="counselor" class="service-img">
-                    <h4>Counselling</h4>
-                    <p>Personal issues, a lack of career direction, and poor study strategies can all impact your ability to succeed. Counsellors can help you develop study skills and assist in working through your personal problems so you can better focus on school.</p>
-                </div>
-                <div class="col-md-4 services">
-                    <img src="images/career.png" alt="counselor" class="service-img">
-                    <h4>Career Centers</h4>
-                    <p>Most schools provide job search coaching and can review your résumé and cover letter. Some also have an on-campus recruitment program where employers conduct interviews on campus. Many Career Centres offer opportunities to meet employers, including job fairs, employer information sessions, and networking events. Some schools have a job board for on-campus and off-campus work.</p>
-                </div>
-                <div class="col-md-4 services">
-                    <img src="images/aid.png" alt="counselor" class="service-img">
-                    <h4>Financial Aid</h4>
-                    <p>The Financial Aid office offers assistance with paying for your education. Financial aid includes student loans, bursaries and scholarships. Some schools also offer emergency bursaries or loans.  
-                    </p>
-                </div>
-            </div>
-            <button type="button" class="btn btn-primary">All Services</button>
-        </div>
-    </section>
-    
-    -------------------------------------------------------------------------------------------------->
+    <!-------------service section ----------------->
     <hr>
-    <h4><center>No Notices Available For Now</center></h4>
+    <section id="services">
+    <h4 style="font-size:32px; font-weight:700;text-decoration:underline;color:#F5FFFA"><center>HOSPITALS</center></h4>
+      <div class="row" style="margin:0% 2%">
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Dhulikhel Hospital</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 2</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 3</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin:0% 2%">
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 4</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 5</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 6</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row" style="margin:0% 2%">
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 7</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 8</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4" style="margin:1% 0%">
+          <div class="card text-center">
+            <div class="card-body">
+              <h5 class="card-title">Hospital 9</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="#" class="btn btn-success" style="font-weight:600">View Full Notice</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
       <hr>
       <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+        <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

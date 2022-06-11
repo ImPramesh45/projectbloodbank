@@ -10,20 +10,15 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/mstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
-
 </head>
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,7 +45,7 @@ session_start();
             </div>
           </nav>
     </section>
-
+    
     <!---------------banner section--------------->
 
     <section id="banner">
@@ -60,8 +55,11 @@ session_start();
                 <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
@@ -73,7 +71,7 @@ session_start();
 
     <section id="services">
         <div class="container text-center">
-          <h4 style="font-weight:700"><u>WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</u></h4>
+          <h4 style="font-size:26px;font-weight:700;"><u>WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</u></h4> <br> 
             <div class="row text-center">
                 <div class="col-md-4 services">
                     <img src="images/img1.png" alt="counselor" class="service-img">
@@ -110,7 +108,7 @@ session_start();
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+        <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

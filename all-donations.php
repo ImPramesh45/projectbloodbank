@@ -10,7 +10,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
 
-    <link rel="stylesheet" href="css/admstyle.css">
+    <link rel="stylesheet" href="css/adminstyle.css">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -20,10 +20,10 @@ session_start();
 </head>
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
-    <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<section id="nav-bar">
+        <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
-              <a class="navbar-brand" href="admin-home.php" style="font-weight:600">BLOODBANK</a>
+              <a class="navbar-brand" href="admin-home.php"style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
               </button>
@@ -47,7 +47,7 @@ session_start();
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Admin Panel
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                       <li><a class="dropdown-item" href="user-list.php">USERS LIST</a></li>
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="stock-blood-list.php">STOCK BLOOD LIST</a></li>
@@ -61,13 +61,10 @@ session_start();
                       <li><hr class="dropdown-divider"></li>
                       <li><a class="dropdown-item" href="message-feedback.php">Messages/Feedbacks</a></li>
                     </ul>
-                  </li>     
+                  </li>   
                 </ul>
                 <h4 style="margin-top:6px; margin-right:12px;color:gainsboro">Welcome, Admin</h4>
                 <a class="btn btn-outline-info" href="admin-logout.php" style="font-weight:650">Logout</a>
-                
-                
-                
               </div>
             </div>
           </nav>
@@ -79,11 +76,14 @@ session_start();
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
+                <a class ="promo-title"href="admin-home.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
@@ -108,8 +108,7 @@ session_start();
         <thead>
             <tr>
                 <th scope="col"><center>ID</center></th>
-                <th scope="col"><center>First Name</center></th>
-                <th scope="col"><center>Last Name</center></th>
+                <th scope="col"><center>Full Name</center></th>
                 <th scope="col"><center>Blood Group</center></th>
                 <th scope="col"><center>Donation Date</center></th>
                 <th scope="col"><center>Approve</center></th>
@@ -124,8 +123,7 @@ session_start();
                 <tbody>
                     <tr class="table-info">
                         <td><center><?= $r1->id; ?></center></td>
-                        <td><center><?= $r1->fname; ?></center></td>
-                        <td><center><?= $r1->lname; ?></center></td>
+                        <td><center><?= $r1->fullname; ?></center></td>
                         <td><center><?= $r1->bgroup; ?></center></td>
                         <td><center><?= $r1->donationdate; ?></center></td>
                         <td><center><form action="approve-donations.php" method="POST">
@@ -149,7 +147,7 @@ session_start();
       <!-- Copyright -->
       <div class="text-center p-3" style="color: white;font-weight:600">
         © 2022 Copyright:
-        <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+        <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
       </div>
       <!-- Copyright -->
     </footer>

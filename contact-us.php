@@ -10,7 +10,7 @@ session_start();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blood Bank</title>
-    <link rel="stylesheet" href="css/aboutstyle.css">
+    <link rel="stylesheet" href="css/abtstyle.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
     <script src="https://kit.fontawesome.com/caec819051.js" crossorigin="anonymous"></script>
@@ -18,7 +18,7 @@ session_start();
 <body style="background: linear-gradient(to right, #67b26f, #4ca2cd)">
 
     <section id="nav-bar">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar navbar navbar-dark bg-dark text-center">
             <div class="container-fluid">
               <a class="navbar-brand" href="index.php" style="font-weight:600">BLOODBANK</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,69 +55,17 @@ session_start();
                 <a class ="promo-title"href="index.php">BLOOD BANK</a>
                     <P>Blood donation will cost you nothing, but it will save a life!</P>
                 </div>
-                <div class="col-md-6 text-center">
-                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank">
+                <div class="col-md-3 text-center">
+                    <img src="images/banner1.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/banner2.png" class="img-fluid" alt="Blood Bank" style="max-height:200px">
                 </div>
             </div>
         </div>
     </section>
     <hr>
-    <form action="" method="POST">
-        <div class="container" style="max-width:80%; background: linear-gradient(to right, #3a6186, #89253e);padding:4px">
-            <div class="title mb-3">
-                <h2 style="text-align:center;color:white"><u>Contact Us</u></h2>
-            </div>
-            <span class="title mb-3">
-                <h5 style="text-align:center;color:white;margin:10px">Email us with any questions or inquiries or call 011-111111. We would be happy to answer your questions and set up a meeting with you.</h5>
-            </span>
-            <br>
-            <br>
-            <div class="input-group mb-3">
-              <input type="text" name="fname" id="firstname" class="form-control form-control-lg" placeholder="First Name"  aria-describedby="basic-addon2" required/> &nbsp;
-              <input type="text" name="lname" id="lastname" class="form-control form-control-lg" placeholder="Last Name" aria-describedby="basic-addon2" required/>
-            </div>
-
-            <div class="input-group mb-3">
-              <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" placeholder="Email" aria-describedby="basic-addon2" required/>
-              <span class="input-group-text" id="basic-addon2">@example.com</span>
-            </div>
-
-            <div class="input-group mb-3">
-              <span class="input-group-text">Message</span>
-              <textarea class="form-control" name="message" placeholder=""></textarea>
-            </div>
-            <div class="input-group mb-3">
-            <input class="btn btn-success btn-lg" type="submit" name="submitt" value="Send" style="color:white;width:50%; font-size:22px; font-weight:700;margin:0% 25%"/>
-            </div>
-        </div>
-    </form>
-    <?php
-        if (isset($_POST['submitt']))
-        {
-            $fname=$_POST['fname'];
-            $lname=$_POST['lname'];
-            $email=$_POST['email'];
-            $message=$_POST['message'];
-            $msgdate=$_POST['msgdate'];
-            $q=$db->prepare("INSERT INTO contact_message(fname,lname,email,message,msgdate) VALUES(:fname,:lname,:email,:message,:msgdate)");
-            $q->bindValue('fname',$fname);
-            $q->bindValue('lname',$lname);
-            $q->bindValue('email',$email);
-            $q->bindValue('message',$message);
-            $q->bindValue('msgdate',$msgdate);
-            if($q->execute())
-            {
-              echo "<script>alert('Message Sent Successfully')</script>";
-              echo("<script>window.location = 'index.php';</script>");
-            }
-            else
-            { 
-              echo "<script>alert('Message Sending Failed')</script>";
-            }
-        }
-    ?>
-    <hr>
-
+    
     <h2><center><u>OUR TEAM</u></center></h2>
 
         <div class="container" style="width:100%">
@@ -130,7 +78,7 @@ session_start();
                                 </div>
                                 <div class="caption">
                                     <h3>Pramesh&nbsp;Dahal</h3>
-                                    <p>Full&nbsp;Stack&nbsp;Developer</p>
+                                    <p>Certified&nbsp;Ethical&nbsp;Hacker</p>
                                     <div class="social-links">
                                         <a href="https://www.facebook.com\pramesh.dahal.7" target="blank"><i class="fa-brands fa-facebook-f"></i></a>
                                         <a href="https://www.instagram.com\impramesh45" target="blank"><i class="fa-brands fa-instagram" target="blank"></i></i></a>
@@ -174,13 +122,64 @@ session_start();
                 </div>
             </div>
         </div>
-
     <hr>
+    <form action="" method="POST">
+        <div class="container" style="max-width:80%; background: linear-gradient(to right, #3a6186, #89253e);padding:4px">
+            <div class="title mb-3">
+                <h5 style="text-align:center;color:white;margin:10px">Email us with any questions or inquiries or call 011-111111</h5>
+            </div>
+            <br>
+            <div class="input-group mb-3">
+              <input type="text" name="fname" id="firstname" class="form-control form-control-lg" placeholder="First Name"  aria-describedby="basic-addon2" required/> &nbsp;
+              <input type="text" name="lname" id="lastname" class="form-control form-control-lg" placeholder="Last Name" aria-describedby="basic-addon2" required/>
+            </div>
+
+            <div class="input-group mb-3">
+              <input type="email" name="email" id="emailAddress" class="form-control form-control-lg" placeholder="Email" aria-describedby="basic-addon2" required/>
+              <span class="input-group-text" id="basic-addon2">@example.com</span>
+            </div>
+
+            <div class="input-group mb-3">
+              <span class="input-group-text">Message</span>
+              <textarea class="form-control" name="message" placeholder="Your Message Here..."></textarea>
+            </div>
+            <div class="input-group mb-3">
+            <input class="btn btn-success btn-lg" type="submit" name="submitt" value="Send" style="width:50%; font-size:22px; font-weight:700;margin:0% 25%"/>
+            </div>
+        </div>
+    </form>
+    <?php
+        if (isset($_POST['submitt']))
+        {
+            $fname=$_POST['fname'];
+            $lname=$_POST['lname'];
+            $email=$_POST['email'];
+            $message=$_POST['message'];
+            $msgdate=$_POST['msgdate'];
+            $q=$db->prepare("INSERT INTO contact_message(fname,lname,email,message,msgdate) VALUES(:fname,:lname,:email,:message,:msgdate)");
+            $q->bindValue('fname',$fname);
+            $q->bindValue('lname',$lname);
+            $q->bindValue('email',$email);
+            $q->bindValue('message',$message);
+            $q->bindValue('msgdate',$msgdate);
+            if($q->execute())
+            {
+              echo "<script>alert('Message Sent Successfully')</script>";
+              echo("<script>window.location = 'index.php';</script>");
+            }
+            else
+            { 
+              echo "<script>alert('Message Sending Failed')</script>";
+            }
+        }
+    ?>
+    <hr>
+
     <footer class="text-center text-lg-start" style="background: linear-gradient(to right, #0b486b, #f56217);">
     <!-- Copyright -->
     <div class="text-center p-3" style="color: white;font-weight:600">
     © 2022 Copyright:
-    <a class="text-dark" href="https://prameshd.com.np/" style="text-decoration:none;font-weight:600">Blood Bank Official</a>
+    <a class="text-light" href="https://prameshd.com.np/" style="text-decoration:underline;font-weight:600" target="blank">Blood Bank Official</a>
     </div>
     <!-- Copyright -->
     </footer>

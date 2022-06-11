@@ -71,7 +71,7 @@ session_start();
 
     <section id="services">
         <div class="container text-center">
-          <h4 style="font-size:26px;font-weight:700;"><u>WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</u></h4> <br> 
+          <h3 style="font-weight:700;background: linear-gradient(to right, #0f0c29, #302b63, #24243e);color:white">WELCOME TO BLOOD BANK MANAGEMENT SYSTEM</h3> <br> 
             <div class="row text-center">
                 <div class="col-md-4 services">
                     <img src="images/img1.png" alt="counselor" class="service-img">
